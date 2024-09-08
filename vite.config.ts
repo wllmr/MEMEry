@@ -1,11 +1,12 @@
-import preact from "@preact/preset-vite";
+import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
+import eslint from "vite-plugin-eslint";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    preact(),
+    react(),
+    eslint(),
     viteStaticCopy({
       targets: [{ src: "src/assets/**/*", dest: "assets" }],
     }),
