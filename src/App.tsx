@@ -30,7 +30,7 @@ const DEFAULT_CARDS: Card[] = [
 
 const FLIP_CARD_DURATION = 0.4;
 
-export function App() {
+export const App = () => {
   const [cards, setCards] = useState<Card[]>([]);
   const [selectedCards, setSelectedCards] = useState<string[]>([]);
   const [tempKeys, setTempKeys] = useState<string[]>([]);
@@ -183,7 +183,7 @@ export function App() {
       </div>
     </main>
   );
-}
+};
 
 const matchCards = (key1: string, key2: string): boolean =>
   key1 !== key2 &&
